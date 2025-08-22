@@ -12,10 +12,10 @@ class ExampleGateway {
     }
 
     // Métodos de consulta ao banco de dados
-    public function findAll() {
+    public static function findAll() {
         /* POR CÓDIGO AQUI */
     }
-    public function findById($id) {
+    public static function findById($id) {
         /* POR CÓDIGO AQUI */
     }
 

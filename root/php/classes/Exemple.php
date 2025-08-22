@@ -20,42 +20,9 @@ class Example {
         return $this->data[$prop];
     }
 
-    // Métodos mágicos para debug
-    public function __toString() {
-        $table = "<table border>";
-
-        $table .= "<tr><th colspan='" . count($this->data) . "'>";
-        $table .= strtoupper(__CLASS__);
-        $table .= "</th></tr>";
-
-        $table .= "<tr>";
-        foreach (array_keys($this->data) as $attr) {
-            $table .= "<th>" . $attr . "</th>";
-        }
-        $table .= "</tr>";
-
-        $table .= "<tr>";
-        foreach ($this->data as $values) {
-            $table .= "<td>" . $values . "</td>";
-        }
-        $table .= "</tr>";
-
-        $table .= "</table>";
-
-        return $table;
-    }
-    public function __debugInfo() {
-        return $this->data;
-    }
-
     // Método mágico para isset()
     public function __isset($prop){
         return isset($this->data[$prop]);
-    } 
-
-    // Métodos auxiliares
-    public function getData() {
-        return $this->data;
     }
 
     // Métodos para manipulação e consulta do banco de dados

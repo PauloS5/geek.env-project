@@ -10,6 +10,7 @@ class Example {
     // Método para estabelecer conexão com o banco
     public static function setConnection($conn) {
         self::$conn = $conn;
+        ExampleGateway::setConnection($conn);
     }
 
     // Métodos mágicos para manipulação de atributos

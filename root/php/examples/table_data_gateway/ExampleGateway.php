@@ -27,7 +27,7 @@ class ExampleGateway {
         /* POR CÓDIGO AQUI */
     }
 
-    // Métodos auxiliares
+    // Métodos auxiliares   
     public function getLastid() {
         /* POR CÓDIGO AQUI */
     }

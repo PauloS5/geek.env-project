@@ -2,19 +2,15 @@
 
 class Generators {
     public static function generatePhoneNumber($formated=false) {
-        $number = (string)rand(10, 99) . "9" . self::generateNumber("00000000");
+        $pattern = $formated ? "(00) 00000-0000" : "00000000000";
 
-        if($formated) {
-            $number = "(" . substr($number, 0, 2) . ") " . substr($number, 2, 5) . "-" . substr($number, 7);
-        }
-
-        return $number;
+        return self::generateNumber($pattern);
     }
 
     public static function generateCpf($formated=false) {
         $pattern = $formated ? "000.000.000-00" : "00000000000";
 
-        return self::generatePhoneNumber($pattern);
+        return self::generateNumber($pattern);
     }
 
     public static function generateSimpleName() {

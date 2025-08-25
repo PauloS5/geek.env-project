@@ -84,4 +84,14 @@ class Generators {
 
         return $number;
     }
+
+    public function generateUser() {
+        $user = new stdClass();
+        $user->name = self::generateFullName();
+        $user->phone = self::generatePhoneNumber(true);
+        $user->cpf = self::generateCpf(true);
+        $user->email = self::generateEmail($user->name);
+
+        return $user;
+    }
 }

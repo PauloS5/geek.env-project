@@ -85,7 +85,7 @@ class Generators {
         return $number;
     }
 
-    public function generateUser() {
+    public static function generateUser() {
         $user = new stdClass();
         $user->name = self::generateFullName();
         $user->phone = self::generatePhoneNumber(true);

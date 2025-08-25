@@ -88,10 +88,12 @@ class Generators {
     public static function generateUser() {
         $user = new stdClass();
         $user->name = self::generateFullName();
-        $user->phone = self::generatePhoneNumber(true);
-        $user->cpf = self::generateCpf(true);
+        $user->phone = self::generatePhoneNumber();
+        $user->cpf = self::generateCpf();
         $user->email = self::generateEmail($user->name);
 
         return $user;
     }
 }
+
+print_r(Generators::generateUser());

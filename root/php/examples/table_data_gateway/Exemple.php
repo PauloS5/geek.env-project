@@ -27,7 +27,16 @@ class Example {
     }
 
     // Métodos para manipulação e consulta do banco de dados
-    public function consultar($par1, $par2) {
+    public static function find ($id) {
+        /* POR CÓDIGO AQUI */
+    }
+    public static function all () {
+        /* POR CÓDIGO AQUI */
+    }
+    public function delete () {
+        /* POR CÓDIGO AQUI */
+    }
+    public function save () {
         /* POR CÓDIGO AQUI */
     }
 

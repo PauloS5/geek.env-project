@@ -25,8 +25,8 @@ class Generators {
         return self::generateSimpleName() . " " . $surname[array_rand($surname)];
     }
 
-    public static function generateEmail() {
-        $name = self::generateFullname();
+    public static function generateEmail($basename = null) {
+        $name = isset($basename) ? $basename : self::generateFullname();
 
         $name = trim($name);
         $name = iconv("UTF-8", "ASCII//TRANSLIT", $name);
